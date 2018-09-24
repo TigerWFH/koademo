@@ -1,7 +1,7 @@
 {
     "appName": "koa-demo",
     "author": "monkey的小屋",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "data": {
         "host": "127.0.0.1",
         "port": 27017,
