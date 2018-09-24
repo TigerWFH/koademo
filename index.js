@@ -9,8 +9,10 @@ const v1  = require('./router/v1');
 
 try {
     app.use(logger());
+    // 路由
     app.use(index.routes());
     app.use(v1.routes());
+    
     app.listen(3002, () => {
         console.log("koa listen on port: 3002")
     });
