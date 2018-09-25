@@ -1,12 +1,14 @@
 const fs = require('fs');
 const logger = require('koa-logger');
 const Koa = require('koa');
+const bodyParser = require('koa-bodyparser');
 
 const app = new Koa();
 // 路由
 const index = require('./router');
 const v1  = require('./router/v1');
 const all = require('./router/default');
+const mock = require('./router/mock');
 
 let config = null;
 if ("development" === process.env.NODE_ENV) {
@@ -18,7 +20,9 @@ else {
 
 try {
     app.use(logger());
+    app.use(bodyParser());
     // 路由
+    app.use(mock.routes());
     app.use(index.routes());
     app.use(v1.routes());
     app.use(all.routes());
