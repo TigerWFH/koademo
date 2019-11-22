@@ -13,8 +13,7 @@ router.get('/signin', (ctx, next) => {
 });
 
 router.all('*', (ctx, next) => {
-    ctx.type = 'html';
-    ctx.status = 404;
-    ctx.body = fs.createReadStream(process.cwd() + '/public/404.html');
+    // ctx.type = 'application/json';
+    // ctx.body = fs.readFileSync(filePath);
 });
 module.exports = router;
