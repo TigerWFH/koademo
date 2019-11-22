@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/about/index.tsx"],"names":["About","React"],"mappings":";;;;;;;;;;;;;;;GAEqBA,M,i5BACR,CACL,MAAO,OAAP,CACH,C,mBAH8BC,+C","file":"static/js/about.daa9105c.chunk.js","sourcesContent":["import * as React from 'react';\n\nexport default class About extends React.Component {\n    render() {\n        return 'About';\n    }\n}"],"sourceRoot":""}
