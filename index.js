@@ -24,8 +24,15 @@ try {
     app.use(logger());
     app.use(bodyParser());
     // 路由
-    app.use(static(path.join(process.cwd(), '/public')));
+    app.use(static(path.join(process.cwd(), '/public')), {
+        
+    });
     // app.use(mock.routes());
+    // 设置请求头
+    router.all('*', (ctx, next) => {
+        // ctx.response.set('SELF', 'self');
+        next();
+    });
     app.use(api.routes());
     router.all('*', (ctx, next) => {
         ctx.type = 'html';
